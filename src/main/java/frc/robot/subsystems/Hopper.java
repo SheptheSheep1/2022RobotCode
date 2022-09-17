@@ -15,18 +15,18 @@ import frc.robot.Constants.HopperConstants;
 
 public class Hopper extends SubsystemBase {
   /** Creates a new Hopper. */
-  WPI_TalonSRX m_hopperMotor;
+  CANSparkMax m_hopperMotor;
   ColorSensor color;
   private final Timer m_timer;
   public Hopper(ColorSensor color) {
     this.color = color;
-    m_hopperMotor = new WPI_TalonSRX(HopperConstants.hopperPort);
+    m_hopperMotor = new CANSparkMax(5, MotorType.kBrushless);
     m_timer = new Timer();
   }
 
   public void setHopper(double speed) {
     m_hopperMotor.set(speed);
-    SmartDashboard.putNumber("Hopper", m_hopperMotor.getMotorOutputPercent());
+    SmartDashboard.putNumber("Hopper", m_hopperMotor.getOutputCurrent());
     /*
     if (color.readColor().equals("Blue")) {
       m_hopperMotor.set(-HopperConstants.hopperSpeed);
@@ -34,7 +34,7 @@ public class Hopper extends SubsystemBase {
     }
     public void startHopper() {
       m_hopperMotor.set(HopperConstants.hopperSpeed);
-      SmartDashboard.putNumber("Hopper", m_hopperMotor.getMotorOutputPercent());
+      SmartDashboard.putNumber("Hopper", m_hopperMotor.getOutputCurrent());
       }
   public void stopHopper() {
     m_hopperMotor.set(0);
