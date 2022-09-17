@@ -98,16 +98,17 @@ public final class Constants {
     }
     public static final class HopperConstants {
         public static final int hopperPort = 5;
-        public static final double hopperSpeed = .1;
+        public static final double hopperSpeed = .2;
     }
     public static final class IntakeConstants {
         public static final int intakePort = 8;
-        public static final double intakeSpeed = .5;
-        public static final double reverseIntakeSpeed = -.5;
+        public static final double intakeSpeed = .3;
+        public static final double reverseIntakeSpeed = -.3;
     }
     public static final class ShooterConstants {
         public static final int masterPort = 4;
-        public static final int slavePort = 1; 
+        public static final int slavePort = 1;
+        public static final int ornagePort = 14;
 
 
         //FOR SPARKMAXPIDCONTROLLER

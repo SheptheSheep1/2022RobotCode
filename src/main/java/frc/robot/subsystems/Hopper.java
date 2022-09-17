@@ -20,7 +20,7 @@ public class Hopper extends SubsystemBase {
   private final Timer m_timer;
   public Hopper(ColorSensor color) {
     this.color = color;
-    m_hopperMotor = new CANSparkMax(5, MotorType.kBrushless);
+    m_hopperMotor = new CANSparkMax(HopperConstants.hopperPort, MotorType.kBrushed);
     m_timer = new Timer();
   }
 

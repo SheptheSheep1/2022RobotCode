@@ -64,6 +64,7 @@ public class RobotContainer {
   public final ColorSensor color = new ColorSensor();
   public final Hopper m_hopper = new Hopper(color);
   public final ShooterWPIPID m_shooter = new ShooterWPIPID(m_hopper);
+  public final ShooterWPIPID m_ornage = new ShooterWPIPID(m_hopper);
   public final Command m_pathweaver = getTrajectoryCommand("FarLeft");
   SendableChooser<Command> m_chooser = new SendableChooser<>();
   SendableChooser<Integer> m_numChooser = new SendableChooser<>();
@@ -179,6 +180,9 @@ public class RobotContainer {
         new JoystickButton(m_driverController2, Button.kRightBumper.value)
         .whenPressed(new RunCommand(() -> m_shooter.setSpeed(ShooterConstants.highSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setSpeed(0), m_shooter));
+        new JoystickButton(m_driverController2, Button.kB.value)
+        .whenPressed(new RunCommand(() -> m_ornage.setSpeed(.5), m_ornage))
+        .whenReleased(new RunCommand(() -> m_ornage.setSpeed(0), m_ornage));
 
        
 /*

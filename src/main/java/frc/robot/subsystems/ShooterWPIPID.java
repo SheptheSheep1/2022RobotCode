@@ -25,6 +25,7 @@ public class ShooterWPIPID extends PIDSubsystem {
   /** Creates a new Shooter. */
   private CANSparkMax m_master = new CANSparkMax(ShooterConstants.masterPort, MotorType.kBrushless);
   private CANSparkMax m_slave = new CANSparkMax(ShooterConstants.slavePort, MotorType.kBrushless);
+  private CANSparkMax m_ornage = new CANSparkMax(ShooterConstants.ornagePort, MotorType.kBrushless);
 
   private SimpleMotorFeedforward m_shooterFeedforward = new SimpleMotorFeedforward(
     ShooterConstants.kSVolts, ShooterConstants.kVVoltSecondsPerRotation);
@@ -52,6 +53,9 @@ public class ShooterWPIPID extends PIDSubsystem {
     m_slave.set(-speed);
     SmartDashboard.putNumber("Shooter Encoder", m_master.getEncoder().getPosition());
   }
+  public void setornageSpeed(double speed) {
+    m_ornage.set(speed);
+  }
 /*
   public void speedSet() {
     m_master.set(ShooterConstants.shootSpeed);
@@ -66,6 +70,9 @@ public class ShooterWPIPID extends PIDSubsystem {
   public void stopShootMotors() {
     m_master.stopMotor();
     m_slave.stopMotor();
+  }
+  public void stopOrnageMotor(){
+    m_ornage.stopMotor();
   }
   public void useBangBang(double setpoint) {
   m_master.setVoltage(MathUtil.clamp(controller.calculate(getRPM(), setpoint), -12, 12));
