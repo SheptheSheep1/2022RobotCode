@@ -106,7 +106,7 @@ public final class Constants {
         public static final double reverseIntakeSpeed = -.3;
     }
     public static final class ShooterConstants {
-        public static final int masterPort = 4;
+        public static final int masterPort = 5;
         public static final int slavePort = 1;
         public static final int ornagePort = 14;
 
