@@ -180,8 +180,8 @@ public class RobotContainer {
         .whenPressed(new RunCommand(() -> m_shooter.setSpeed(ShooterConstants.highSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setSpeed(0), m_shooter));
         new JoystickButton(m_driverController2, Button.kB.value)
-        .whenPressed(new RunCommand(() -> m_shooter.setSpeed(.5), m_shooter))
-        .whenReleased(new RunCommand(() -> m_shooter.setSpeed(0), m_shooter));
+        .whenPressed(new RunCommand(() -> m_shooter.setornageSpeed(.5), m_shooter))
+        .whenReleased(new RunCommand(() -> m_shooter.setornageSpeed(0), m_shooter));
 
        
 /*
