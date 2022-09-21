@@ -108,7 +108,7 @@ public final class Constants {
     public static final class ShooterConstants {
         public static final int masterPort = 5;
         public static final int slavePort = 1;
-        public static final int ornagePort = 14;
+        public static final int orangePort = 14;
 
 
         //FOR SPARKMAXPIDCONTROLLER
