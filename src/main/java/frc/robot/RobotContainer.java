@@ -159,11 +159,11 @@ public class RobotContainer {
 
     //HOPPER FEEDS OUT
         new JoystickButton(m_driverController2, Button.kA.value)
-        .whenPressed(new RunCommand(() -> m_hopper.setHopper(HopperConstants.hopperSpeed), m_hopper))
+        .whenPressed(new RunCommand(() -> m_hopper.setHopper(-HopperConstants.hopperSpeed), m_hopper))
         .whenReleased(new RunCommand(() -> m_hopper.stopHopperMotor(), m_hopper));
     //HOPPER FEEDS IN
         new JoystickButton(m_driverController2, Button.kX.value)
-        .whenPressed(new RunCommand(() -> m_hopper.setHopper(-HopperConstants.hopperSpeed), m_hopper))
+        .whenPressed(new RunCommand(() -> m_hopper.setHopper(HopperConstants.hopperSpeed), m_hopper))
         .whenReleased(new RunCommand(() -> m_hopper.stopHopperMotor(), m_hopper));
         
         /*
@@ -175,13 +175,17 @@ public class RobotContainer {
         .whenPressed(new RunCommand(() -> m_shooter.setSpeed(ShooterConstants.lowSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setSpeed(0), m_shooter));
     //SHOOTS OTHER WAY
-    
         new JoystickButton(m_driverController2, Button.kRightBumper.value)
         .whenPressed(new RunCommand(() -> m_shooter.setSpeed(ShooterConstants.highSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setSpeed(0), m_shooter));
+    //ORANGE SHOOTS RIGHT WAY
         new JoystickButton(m_driverController2, Button.kB.value)
-        .whenPressed(new RunCommand(() -> m_shooter.setorangeSpeed(.5), m_shooter))
+        .whenPressed(new RunCommand(() -> m_shooter.setorangeSpeed(ShooterConstants.orangeSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setorangeSpeed(0), m_shooter));
+    //ORANGE SHOOTS OTHER WAY
+        new JoystickButton(m_driverController2, Button.kY.value)
+          .whenPressed(new RunCommand(() -> m_shooter.setorangeSpeed(-ShooterConstants.orangeSpeed), m_shooter))
+          .whenReleased(new RunCommand(() -> m_shooter.setorangeSpeed(0), m_shooter));
 
        
 /*

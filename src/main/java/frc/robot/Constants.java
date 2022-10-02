@@ -126,6 +126,7 @@ public final class Constants {
 
         public static final double lowSpeed = .25;
         public static final double highSpeed = .425;
+        public static final double orangeSpeed = .3;
 
         public static final double kSVolts = 0.22092;
         public static final double kVVoltSecondsPerRotation = 0.062875;
