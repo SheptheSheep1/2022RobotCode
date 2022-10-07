@@ -47,7 +47,6 @@ public class Drivetrain extends SubsystemBase {
 
   private final Timer m_timer;
 
-  
 
   public Drivetrain() {
   m_leftMaster =  new WPI_TalonSRX(DriveConstants.leftMaster);
