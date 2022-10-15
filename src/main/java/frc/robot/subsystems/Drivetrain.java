@@ -5,6 +5,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.TalonSRXSimCollection;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.math.MathUtil;
@@ -77,6 +78,8 @@ public class Drivetrain extends SubsystemBase {
   m_right = new MotorControllerGroup(m_rightMaster, m_rightSlave);
   m_left.setInverted(true);
   //m_right.setInverted(true);
+  TalonSRXSimCollection m_leftDriveSim = m_leftMaster.getSimCollection();
+  TalonSRXSimCollection m_rightDriveSim = m_rightMaster.getSimCollection();
 
   m_diffDrive = new DifferentialDrive(m_left, m_right);
   m_diffDrive.setDeadband(DriveConstants.deadband);

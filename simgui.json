@@ -1,4 +1,43 @@
 {
+  "HALProvider": {
+    "Other Devices": {
+      "SPARK MAX [3]": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [5]": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [8]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[1]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[2]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[3]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[4]": {
+        "header": {
+          "open": true
+        }
+      }
+    }
+  },
   "NTProvider": {
     "types": {
       "/FMSInfo": "FMSInfo",
@@ -8,6 +47,7 @@
       "/LiveWindow/Intake": "Subsystem",
       "/LiveWindow/Shooter": "Subsystem",
       "/LiveWindow/Shooter/PID Controller": "PIDController",
+      "/LiveWindow/ShooterWPIPID": "Subsystem",
       "/LiveWindow/ShooterWPIPID/PID Controller": "PIDController",
       "/LiveWindow/Ungrouped/ADXRS450_Gyro[0]": "Gyro",
       "/LiveWindow/Ungrouped/DifferentialDrive[1]": "DifferentialDrive",
@@ -29,6 +69,12 @@
     }
   },
   "NetworkTables": {
+    "Shuffleboard": {
+      "Autonomous": {
+        "open": true
+      },
+      "open": true
+    },
     "SmartDashboard": {
       "Field": {
         "open": true

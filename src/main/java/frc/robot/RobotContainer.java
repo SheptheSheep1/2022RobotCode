@@ -6,6 +6,8 @@ package frc.robot;
 
 import java.util.ArrayList;
 
+import com.ctre.phoenix.motorcontrol.TalonSRXSimCollection;
+
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.controller.RamseteController;
 import edu.wpi.first.math.controller.SimpleMotorFeedforward;
