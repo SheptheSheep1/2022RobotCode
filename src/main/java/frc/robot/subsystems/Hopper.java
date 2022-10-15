@@ -6,7 +6,7 @@ package frc.robot.subsystems;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-import frc.robot.subsystems.ColorSensor;
+//import frc.robot.subsystems.ColorSensor;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -17,11 +17,13 @@ public class Hopper extends SubsystemBase {
   CANSparkMax m_hopperMotor;
   ColorSensor color;
   private final Timer m_timer;
+  
   public Hopper(ColorSensor color) {
     this.color = color;
     m_hopperMotor = new CANSparkMax(HopperConstants.hopperPort, MotorType.kBrushed);
     m_timer = new Timer();
   }
+  
 
   public void setHopper(double speed) {
     m_hopperMotor.set(speed);

@@ -10,8 +10,8 @@ import frc.robot.subsystems.Drivetrain;
 
 public class driveTime extends CommandBase {
   private final Drivetrain drive;
-  private double startTime;
-  private double time;
+  //private double startTime;
+  //private double time;
   private double seconds;
   private double driveSpeed;
   Timer timer = new Timer();

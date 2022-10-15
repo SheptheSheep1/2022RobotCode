@@ -8,9 +8,9 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.math.MathUtil;
-import edu.wpi.first.math.filter.SlewRateLimiter;
+//import edu.wpi.first.math.filter.SlewRateLimiter;
 import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.math.geometry.Rotation2d;
+//import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.math.kinematics.DifferentialDriveWheelSpeeds;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
@@ -42,7 +42,7 @@ public class Drivetrain extends SubsystemBase {
 
   private final DifferentialDriveOdometry m_odometry;
 
-  private final Pose2d m_pose;
+  //private final Pose2d m_pose;
   public final Field2d m_field;
 
   private final Timer m_timer;
@@ -92,7 +92,7 @@ public class Drivetrain extends SubsystemBase {
 
   m_odometry = new DifferentialDriveOdometry(m_gyro.getRotation2d());
 
-  m_pose = new Pose2d();
+  //m_pose = new Pose2d();
   m_field = new Field2d();
   //m_field.setRobotPose(xMeters, yMeters, rotation);
   SmartDashboard.putData("Field", m_field);

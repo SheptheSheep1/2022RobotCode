@@ -10,7 +10,7 @@ import frc.robot.subsystems.Drivetrain;
 
 public class autoDrive extends CommandBase {
   private final Drivetrain drive;
-  private double startTime;
+  //private double startTime;
   private double time;
   private double seconds;
   private double driveSpeed;
@@ -21,7 +21,7 @@ public class autoDrive extends CommandBase {
     this.seconds = seconds;
     this.driveSpeed = driveSpeed;
     addRequirements(drive);
-    startTime = Timer.getFPGATimestamp();
+    //startTime = Timer.getFPGATimestamp();
     //time = 0;
   }
 

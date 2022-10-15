@@ -7,13 +7,13 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants.HopperConstants;
-import frc.robot.Constants.ShooterConstants;
+//import frc.robot.Constants.ShooterConstants;
 import frc.robot.subsystems.Hopper;
 import frc.robot.subsystems.ShooterWPIPID;
 
 public class autoShoot extends CommandBase {
   /** Creates a new autoShoot. */
-  private double startTime;
+  //private double startTime;
   private double time;
   private ShooterWPIPID shoot;
   private Hopper hopper;
@@ -27,7 +27,7 @@ public class autoShoot extends CommandBase {
     this.shootSpeed = shootSpeed;
     addRequirements(shoot);
     addRequirements(hopper);
-    startTime = Timer.getFPGATimestamp();
+    //startTime = Timer.getFPGATimestamp();
   }
 
   // Called when the command is initially scheduled.

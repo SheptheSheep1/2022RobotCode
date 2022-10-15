@@ -5,16 +5,9 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import edu.wpi.first.wpilibj2.command.RunCommand;
-import frc.robot.commands.Autonomous;
-import frc.robot.commands.DeprecatedAuto;
-import frc.robot.commands.autoDrive;
-import frc.robot.subsystems.Drivetrain;
-
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
  * each mode, as described in the TimedRobot documentation. If you change the name of this class or
@@ -38,18 +31,18 @@ public class Robot extends TimedRobot {
     //m_autonomousCommand = new DeprecatedAuto()
     m_robotContainer = new RobotContainer();
    // drive = new Drivetrain();
-    m_robotContainer.m_drivetrain.m_field.setRobotPose(m_robotContainer.trajectories.get(m_robotContainer.m_numChooser.getSelected()).getXMeters(), 
+    RobotContainer.m_drivetrain.m_field.setRobotPose(m_robotContainer.trajectories.get(m_robotContainer.m_numChooser.getSelected()).getXMeters(), 
    m_robotContainer.trajectories.get(m_robotContainer.m_numChooser.getSelected()).getYMeters(), 
    m_robotContainer.trajectories.get(m_robotContainer.m_numChooser.getSelected()).getRotation2d());
    SmartDashboard.putNumber("XBOX leftY", -m_robotContainer.m_driverController.getLeftY());
     SmartDashboard.putNumber("XBOX leftX", m_robotContainer.m_driverController.getLeftX());
     SmartDashboard.putNumber("XBOX rightY", -m_robotContainer.m_driverController.getRightY());
     SmartDashboard.putNumber("XBOX rightX", m_robotContainer.m_driverController.getRightX());
-    SmartDashboard.putNumber("PoseX", m_robotContainer.m_drivetrain.m_field.getRobotObject().getPose().getX());
-    SmartDashboard.putNumber("PoseY", m_robotContainer.m_drivetrain.m_field.getRobotObject().getPose().getY());
-    SmartDashboard.putNumber("PoseSIN", m_robotContainer.m_drivetrain.m_field.getRobotObject().getPose().getRotation().getSin());
-    SmartDashboard.putNumber("PoseCOS", m_robotContainer.m_drivetrain.m_field.getRobotObject().getPose().getRotation().getCos());
-    SmartDashboard.putNumber("PoseTAN", m_robotContainer.m_drivetrain.m_field.getRobotObject().getPose().getRotation().getTan());
+    SmartDashboard.putNumber("PoseX", RobotContainer.m_drivetrain.m_field.getRobotObject().getPose().getX());
+    SmartDashboard.putNumber("PoseY", RobotContainer.m_drivetrain.m_field.getRobotObject().getPose().getY());
+    SmartDashboard.putNumber("PoseSIN", RobotContainer.m_drivetrain.m_field.getRobotObject().getPose().getRotation().getSin());
+    SmartDashboard.putNumber("PoseCOS", RobotContainer.m_drivetrain.m_field.getRobotObject().getPose().getRotation().getCos());
+    SmartDashboard.putNumber("PoseTAN", RobotContainer.m_drivetrain.m_field.getRobotObject().getPose().getRotation().getTan());
   }
 
   /**

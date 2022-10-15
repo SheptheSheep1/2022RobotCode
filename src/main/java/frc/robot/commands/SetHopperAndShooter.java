@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj2.command.ConditionalCommand;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-import frc.robot.Constants.HopperConstants;
+//import frc.robot.Constants.HopperConstants;
 import frc.robot.subsystems.Hopper;
 import frc.robot.subsystems.ShooterWPIPID;
 
