@@ -40,9 +40,11 @@ public class autoShoot extends CommandBase {
   @Override
   public void execute() {
     if (Timer.getFPGATimestamp() - time < seconds) {
+      shoot.setorangeSpeed(shootSpeed);
       shoot.setSpeed(shootSpeed);
       hopper.setHopper(-HopperConstants.hopperSpeed);
     } else {
+      shoot.stopOrangeMotor();
       shoot.stopShootMotors();
       hopper.stopHopperMotor();
   }
