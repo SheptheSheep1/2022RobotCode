@@ -97,11 +97,11 @@ public final class Constants {
         public static final double veloTol = 0;
     }
     public static final class HopperConstants {
-        public static final int hopperPort = 5;
+        public static final int hopperPort = 8;
         public static final double hopperSpeed = .2;
     }
     public static final class IntakeConstants {
-        public static final int intakePort = 8;
+        public static final int intakePort = 3;
         public static final double intakeSpeed = .3;
         public static final double reverseIntakeSpeed = -.3;
     }

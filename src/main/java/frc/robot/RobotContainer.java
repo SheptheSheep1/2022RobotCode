@@ -162,6 +162,7 @@ public class RobotContainer {
         new JoystickButton(m_driverController2, Button.kB.value)
         .whenPressed(new DeprecatedHopAndShoot(m_hopper, m_shooter));
     */
+  
     //SHOOTS RIGHT WAY
         new JoystickButton(m_driverController2, Button.kLeftBumper.value)
         .whenPressed(new RunCommand(() -> m_shooter.setSpeed(ShooterConstants.lowSpeed), m_shooter))
@@ -170,15 +171,17 @@ public class RobotContainer {
         new JoystickButton(m_driverController2, Button.kRightBumper.value)
         .whenPressed(new RunCommand(() -> m_shooter.setSpeed(ShooterConstants.highSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setSpeed(0), m_shooter));
+    
     //ORANGE SHOOTS RIGHT WAY
-        new JoystickButton(m_driverController2, Button.kB.value)
+    
+    new JoystickButton(m_driverController2, Button.kB.value)
         .whenPressed(new RunCommand(() -> m_shooter.setorangeSpeed(ShooterConstants.orangeSpeed), m_shooter))
         .whenReleased(new RunCommand(() -> m_shooter.setorangeSpeed(0), m_shooter));
     //ORANGE SHOOTS OTHER WAY
         new JoystickButton(m_driverController2, Button.kY.value)
           .whenPressed(new RunCommand(() -> m_shooter.setorangeSpeed(-ShooterConstants.orangeSpeed), m_shooter))
           .whenReleased(new RunCommand(() -> m_shooter.setorangeSpeed(0), m_shooter));
-
+    
        
 /*
     new JoystickButton(m_driverController, Button.kY.value)
